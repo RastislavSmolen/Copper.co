@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 class OrderListModel {
 
     var networking: NetworkingProtoccol

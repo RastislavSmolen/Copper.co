@@ -37,6 +37,8 @@
 		636E692A26F66CE100E2D73E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 636E691B26F66CE100E2D73E /* OFL.txt */; };
 		636E692B26F66CE100E2D73E /* IBMPlexSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 636E691C26F66CE100E2D73E /* IBMPlexSans-ThinItalic.ttf */; };
 		63CD78B826F671FB00EE1769 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD78B726F671FB00EE1769 /* CornerRadius.swift */; };
+		63CD78BB26F7905900EE1769 /* SavedOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD78BA26F7905900EE1769 /* SavedOrders.swift */; };
+		63CD78BE26F791F800EE1769 /* DisplayOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD78BD26F791F800EE1769 /* DisplayOrdersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		636E691B26F66CE100E2D73E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		636E691C26F66CE100E2D73E /* IBMPlexSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		63CD78B726F671FB00EE1769 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		63CD78BA26F7905900EE1769 /* SavedOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedOrders.swift; sourceTree = "<group>"; };
+		63CD78BD26F791F800EE1769 /* DisplayOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOrdersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				63CD78B626F671E200EE1769 /* Utilities */,
+				63CD78BC26F791CA00EE1769 /* DisplayOrdersViewController */,
 				6320CEB126F65EDC00A25E4E /* Order */,
 				636E690A26F6636600E2D73E /* OrderListDisplay */,
+				63CD78B926F7903700EE1769 /* SavedOrders */,
 				6320CEAA26F65DE800A25E4E /* Networking */,
 				6320CE7726F65CCC00A25E4E /* AppDelegate.swift */,
 				6320CE7D26F65CCC00A25E4E /* Main.storyboard */,
@@ -232,6 +238,22 @@
 			children = (
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		63CD78B926F7903700EE1769 /* SavedOrders */ = {
+			isa = PBXGroup;
+			children = (
+				63CD78BA26F7905900EE1769 /* SavedOrders.swift */,
+			);
+			path = SavedOrders;
+			sourceTree = "<group>";
+		};
+		63CD78BC26F791CA00EE1769 /* DisplayOrdersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63CD78BD26F791F800EE1769 /* DisplayOrdersViewController.swift */,
+			);
+			path = DisplayOrdersViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CD78BE26F791F800EE1769 /* DisplayOrdersViewController.swift in Sources */,
 				6320CE8226F65CCC00A25E4E /* Copper_co.xcdatamodeld in Sources */,
 				6320CE7C26F65CCC00A25E4E /* ViewController.swift in Sources */,
 				63CD78B826F671FB00EE1769 /* CornerRadius.swift in Sources */,
@@ -386,6 +409,7 @@
 				6320CEAC26F65E2700A25E4E /* NetworkErrors.swift in Sources */,
 				6320CE7826F65CCC00A25E4E /* AppDelegate.swift in Sources */,
 				6320CE7A26F65CCC00A25E4E /* SceneDelegate.swift in Sources */,
+				63CD78BB26F7905900EE1769 /* SavedOrders.swift in Sources */,
 				6320CEB026F65E7800A25E4E /* FetchService.swift in Sources */,
 				636E690C26F6639500E2D73E /* OrderListModel.swift in Sources */,
 				6320CEAE26F65E4B00A25E4E /* ApiEndpoint.swift in Sources */,
