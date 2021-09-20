@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum APIEndpoit: String{
+enum APIEndpoitLocalized: String{
     case order = "https://assessments.stage.copper.co/ios/orders"
     func api() ->String { return self.rawValue }
 }

@@ -15,7 +15,7 @@ class OrderListModel {
     }
 
     func fetchData(completion: @escaping ((_ data: [Orders]?,_ err: String?) -> Void)) {
-        guard let url = URL(string: APIEndpoit.order.api()) else { return }
+        guard let url = URL(string: APIEndpoitLocalized.order.api()) else { return }
         networking.fetchData(url: url, type: Orders.self){ (result) in
             switch result {
             case.success(let response): completion( [response], nil )
