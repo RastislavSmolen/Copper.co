@@ -33,8 +33,8 @@ class DisplayOrdersViewController : UIViewController, UITableViewDelegate {
         let personFetchRequest: NSFetchRequest<SavedOrders> = SavedOrders.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let orders = try? context.fetch(personFetchRequest)
-        guard let order = orders else {fatalError()}
-        
+        guard let order = orders else { return }
+
         context.perform {
             self.tableView.reloadData()
         }
