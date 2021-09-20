@@ -10,27 +10,26 @@ import UIKit
 import CoreData
 
 class DisplayOrdersViewController : UIViewController, UITableViewDelegate {
-
+    
     @IBOutlet var tableView: UITableView!
     private var savedOrdersObject = [NSManagedObject]()
-
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         fetchCoreData()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         deleteCoreData()
     }
-
+    
     private func fetchCoreData() {
-        guard let appDelegate =
-                UIApplication.shared.delegate as? AppDelegate else {
-            fatalError()
-        }
+
         let personFetchRequest: NSFetchRequest<SavedOrders> = SavedOrders.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let orders = try? context.fetch(personFetchRequest)
@@ -41,10 +40,9 @@ class DisplayOrdersViewController : UIViewController, UITableViewDelegate {
         }
         savedOrdersObject = order
     }
+    
+    private func deleteCoreData() {
 
-   private func deleteCoreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         let context = appDelegate.persistentContainer.viewContext
         
         for object in savedOrdersObject {
@@ -58,16 +56,18 @@ class DisplayOrdersViewController : UIViewController, UITableViewDelegate {
 }
 
 extension DisplayOrdersViewController : UITableViewDataSource {
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
-        print(savedOrdersObject.count)
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedOrdersObject.count
     }
 
-    func tableView(_ tableView: UITableView,cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let order = savedOrdersObject[indexPath.row]
+
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifierLocalized.cell.value()) as! Cell
+
         cell.setupWith(object : order)
+
         return cell
     }
 }
