@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
     @IBAction func download(_ sender: Any) {
         do {
-            try model?.writeLargeObject(orders: cachedOrders,completion: {[weak self] in
+            try model?.saveToCoreData(orders: cachedOrders,completion: {[weak self] in
                 self?.createSpinnerView()
                 self?.performSegue(withIdentifier: SequeIdentifierLocalized.show.seque(), sender: nil)
             })
