@@ -13,7 +13,6 @@ class DisplayOrdersViewController : UIViewController, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     private var savedOrdersObject = [NSManagedObject]()
-    private let vc = ViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,17 +66,8 @@ extension DisplayOrdersViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView,cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let order = savedOrdersObject[indexPath.row]
-        guard let ammount = Double(order.value(forKeyPath: OrderLocalized.amount.value()) as? String ?? "00") else {fatalError()}
-        guard let currency = order.value(forKeyPath: OrderLocalized.currency.value()) as? String else {fatalError()}
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifierLocalized.cell.value()) as! Cell
-        cell.currencyTextLabel.text =
-            order.value(forKeyPath: OrderLocalized.currency.value()) as? String
-        cell.amountTextLabel.text = "\(floor(ammount * 10) / 1000.00) \(currency) "
-            
-        cell.createdAtTextLabel.text = cell.setupWith(date: order.value(forKey: OrderLocalized.createdAt.value()) as? String ?? "N/A")
-        cell.statusTextLabel.text =
-            order.value(forKeyPath: OrderLocalized.orderStatus.value()) as? String
+        cell.setupWith(object : order)
         return cell
     }
 }
