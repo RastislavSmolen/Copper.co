@@ -31,33 +31,6 @@ class ViewController: UIViewController {
         cachedOrders = order
     }
 
-    private func writeLargeObject(orders:[Orders],completion: @escaping () -> Void) throws {
-        guard let appDelegate =
-                UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let context = appDelegate.persistentContainer.newBackgroundContext()
-        context.automaticallyMergesChangesFromParent = true
-        context.perform {
-            for orders in orders {
-                for order in orders.orders {
-                    let savedObject = SavedOrders(context: context)
-                    savedObject.currency = order.currency.rawValue
-                    savedObject.createdAt = order.createdAt
-                    savedObject.amount = order.amount
-                    savedObject.orderStatus = order.orderStatus.rawValue
-                }
-            }
-            do {
-                try context.save()
-                DispatchQueue.main.async {
-                    completion()
-                }
-            } catch {
-            }
-        }
-    }
-
     private func createSpinnerView() {
         let child = SpinnerViewController()
         addChild(child)
@@ -73,7 +46,7 @@ class ViewController: UIViewController {
 
     @IBAction func download(_ sender: Any) {
         do {
-            try writeLargeObject(orders: cachedOrders,completion: {[weak self] in
+            try model?.saveToCoreData(orders: cachedOrders,completion: {[weak self] in
                 self?.createSpinnerView()
                 self?.performSegue(withIdentifier: SequeIdentifierLocalized.show.seque(), sender: nil)
             })
