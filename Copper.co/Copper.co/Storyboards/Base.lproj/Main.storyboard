@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSans-Bold.ttf">
+            <string>IBMPlexSans-Bold</string>
+        </array>
+        <array key="IBMPlexSans-Light.ttf">
+            <string>IBMPlexSans-Light</string>
+        </array>
+        <array key="IBMPlexSans-Regular.ttf">
+            <string>IBMPlexSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Copper_co" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZo-er-WgK">
+                                <rect key="frame" x="135" y="415.5" width="144.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click “Download” to view transaction history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ4-ub-dSJ">
+                                <rect key="frame" x="47.5" y="459" width="319" height="21"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Regular" family="IBM Plex Sans" pointSize="16"/>
+                                <color key="textColor" red="0.52549019607843139" green="0.57647058823529407" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-Kq-2u1">
+                                <rect key="frame" x="149" y="283.5" width="116" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="Vzp-HO-AV5"/>
+                                    <constraint firstAttribute="width" secondItem="9JL-Kq-2u1" secondAttribute="height" multiplier="116:113" id="lV5-E8-k74"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-2M-zRr" customClass="CustomButton" customModule="Copper_co" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="515" width="213" height="56"/>
+                                <color key="backgroundColor" red="0.41568627450980389" green="0.91764705882352937" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Gzy-qU-tJR"/>
+                                    <constraint firstAttribute="width" constant="213" id="Xax-Ib-P1z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="16"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="download:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4T4-wy-vAw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OZo-er-WgK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BJw-9W-Nrd"/>
+                            <constraint firstItem="fjN-2M-zRr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qa7-5T-G3t"/>
+                            <constraint firstItem="fjN-2M-zRr" firstAttribute="top" secondItem="mZ4-ub-dSJ" secondAttribute="bottom" constant="35" id="SYz-N0-yRA"/>
+                            <constraint firstItem="mZ4-ub-dSJ" firstAttribute="top" secondItem="OZo-er-WgK" secondAttribute="bottom" constant="12" id="Vhf-rh-X0D"/>
+                            <constraint firstItem="mZ4-ub-dSJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zan-M2-JLZ"/>
+                            <constraint firstItem="OZo-er-WgK" firstAttribute="top" secondItem="9JL-Kq-2u1" secondAttribute="bottom" constant="19" id="aFR-Oh-0Pw"/>
+                            <constraint firstItem="9JL-Kq-2u1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="m2f-H7-u6m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fjN-2M-zRr" secondAttribute="bottom" constant="291" id="yTE-FX-AqR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="fAX-P5-3uJ" kind="show" identifier="show" id="PxV-BV-Ng9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="26.785714285714285"/>
+        </scene>
+        <!--Display Orders View Controller-->
+        <scene sceneID="7EC-cy-mUd">
+            <objects>
+                <viewController id="fAX-P5-3uJ" customClass="DisplayOrdersViewController" customModule="Copper_co" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPY-Th-5t2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Fb-bX-6rF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="63" id="TaU-1A-V7C" customClass="Cell" customModule="Copper_co" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TaU-1A-V7C" id="Y0a-nV-JvA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDQ-dv-xeL">
+                                                    <rect key="frame" x="16" y="12" width="46" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Regular" family="IBM Plex Sans" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 21, 2021 11:50 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP3-AF-xTJ">
+                                                    <rect key="frame" x="16" y="34" width="136" height="17"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Light" family="IBM Plex Sans" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3.0019 BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-rh-kdj">
+                                                    <rect key="frame" x="302" y="12" width="95" height="21"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Regular" family="IBM Plex Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Executed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-5y-YJI">
+                                                    <rect key="frame" x="343" y="34" width="54" height="17"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Light" family="IBM Plex Sans" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="RR3-5y-YJI" secondAttribute="trailing" constant="17" id="AvQ-d7-WkZ"/>
+                                                <constraint firstItem="ZP3-AF-xTJ" firstAttribute="leading" secondItem="Y0a-nV-JvA" secondAttribute="leading" constant="16" id="DmI-54-ENU"/>
+                                                <constraint firstItem="L8a-rh-kdj" firstAttribute="top" secondItem="Y0a-nV-JvA" secondAttribute="top" constant="12" id="L10-fa-ADM"/>
+                                                <constraint firstAttribute="trailing" secondItem="L8a-rh-kdj" secondAttribute="trailing" constant="17" id="MSr-z9-JD3"/>
+                                                <constraint firstItem="dDQ-dv-xeL" firstAttribute="top" secondItem="Y0a-nV-JvA" secondAttribute="top" constant="12" id="TKy-dw-K8x"/>
+                                                <constraint firstItem="ZP3-AF-xTJ" firstAttribute="top" secondItem="Y0a-nV-JvA" secondAttribute="top" constant="34" id="Tt1-rk-MSF"/>
+                                                <constraint firstItem="dDQ-dv-xeL" firstAttribute="leading" secondItem="Y0a-nV-JvA" secondAttribute="leading" constant="16" id="YnM-7c-mki"/>
+                                                <constraint firstItem="RR3-5y-YJI" firstAttribute="top" secondItem="Y0a-nV-JvA" secondAttribute="top" constant="34" id="mtz-Wd-GlA"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZP3-AF-xTJ" secondAttribute="bottom" constant="12" id="qqo-M5-o5F"/>
+                                                <constraint firstAttribute="bottom" secondItem="RR3-5y-YJI" secondAttribute="bottom" constant="12" id="tUB-hS-CoG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountTextLabel" destination="L8a-rh-kdj" id="5z5-DX-M0d"/>
+                                            <outlet property="createdAtTextLabel" destination="ZP3-AF-xTJ" id="bN4-w2-YSR"/>
+                                            <outlet property="currencyTextLabel" destination="dDQ-dv-xeL" id="ufa-H9-DqV"/>
+                                            <outlet property="statusTextLabel" destination="RR3-5y-YJI" id="ahu-l2-Pun"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0UB-Md-BYq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5Fb-bX-6rF" secondAttribute="bottom" id="1HA-DR-R0o"/>
+                            <constraint firstItem="5Fb-bX-6rF" firstAttribute="trailing" secondItem="0UB-Md-BYq" secondAttribute="trailing" id="KYg-tM-V0s"/>
+                            <constraint firstItem="5Fb-bX-6rF" firstAttribute="top" secondItem="0UB-Md-BYq" secondAttribute="top" id="cFJ-vb-tCd"/>
+                            <constraint firstItem="5Fb-bX-6rF" firstAttribute="leading" secondItem="0UB-Md-BYq" secondAttribute="leading" id="odE-Qj-aTZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LtJ-P7-l6H"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Fb-bX-6rF" id="LrX-vl-g4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ogb-Il-Ocq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="25.446428571428569"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="fjN-2M-zRr">
+            <size key="intrinsicContentSize" width="76" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Logo" width="324" height="307"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
