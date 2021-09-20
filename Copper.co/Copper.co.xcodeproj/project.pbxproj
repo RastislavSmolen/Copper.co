@@ -152,6 +152,7 @@
 				6320CEB126F65EDC00A25E4E /* Order */,
 				636E690A26F6636600E2D73E /* OrderListDisplay */,
 				63CD78B926F7903700EE1769 /* SavedOrders */,
+				63CD78BF26F7C3D600EE1769 /* CoreData */,
 				6320CEAA26F65DE800A25E4E /* Networking */,
 				6320CE7726F65CCC00A25E4E /* AppDelegate.swift */,
 				6320CE7D26F65CCC00A25E4E /* Main.storyboard */,
@@ -254,6 +255,13 @@
 				63CD78BD26F791F800EE1769 /* DisplayOrdersViewController.swift */,
 			);
 			path = DisplayOrdersViewController;
+			sourceTree = "<group>";
+		};
+		63CD78BF26F7C3D600EE1769 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
